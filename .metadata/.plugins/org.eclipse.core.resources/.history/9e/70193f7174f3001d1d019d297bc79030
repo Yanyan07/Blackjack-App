@@ -1,0 +1,15 @@
+package com.blackjack.backend.service;
+
+import java.util.List;
+import com.blackjack.backend.entities.Card;
+import com.blackjack.backend.entities.CardItem;
+import com.blackjack.backend.entities.Deck;
+
+public interface DeckService {
+	void initDeck();
+//	Deck getDeckById();
+//	List<Card> getCardsInDeck();
+	List<CardItem> shuffle();
+	CardItem dealCard(int cardItemId);
+	List<CardItem> getAllCardItemsInDeck();
+}

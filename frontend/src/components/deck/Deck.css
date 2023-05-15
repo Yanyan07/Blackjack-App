@@ -1,0 +1,20 @@
+.deck {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+}
+.btn {
+  transform: translate(-50%);
+  width: 120px;
+  height: 60px;
+  background-color: rgb(0, 155, 180);
+  /* rgb(0, 180, 100); */
+  border: solid rgb(9, 139, 220) 1px;
+  border-radius: 5px;
+  color: rgb(240,240,240);
+  font-size: 25px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.btn:hover {
+  background-color: rgb(0, 180, 190);
+}

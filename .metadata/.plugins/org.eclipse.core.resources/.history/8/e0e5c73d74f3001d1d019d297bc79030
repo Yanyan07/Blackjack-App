@@ -1,0 +1,5 @@
+package com.blackjack.backend.service;
+
+public class CardItemService {
+
+}

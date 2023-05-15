@@ -1,0 +1,48 @@
+package com.blackjack.backend.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+public class CardItem {
+	@Id
+	@GeneratedValue
+	private Integer id;
+	
+	@Column(name="is_available")
+	private Boolean isAvailable;
+	
+	@JsonIgnore
+	@ManyToOne 
+	@JoinColumn(name="card_id")
+	private Card card;
+
+	public Integer getId() {
+		return id;
+	}
+	
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+	public Boolean getIsAvailable() {
+		return isAvailable;
+	}
+
+	public void setIsAvailable(Boolean isAvailable) {
+		this.isAvailable = isAvailable;
+	}
+
+	public Card getCard() {
+		return card;
+	}
+
+	public void setCard(Card card) {
+		this.card = card;
+	}	
+}
