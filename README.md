@@ -1,18 +1,41 @@
 # Blackjack App 
-
+Could you please organize the following "overview" for me?
 ## Overview
-The Blackjack Game project is a web application that allows users to play the popular casino card game, Blackjack. The application is built using the Spring Boot framework for the backend and React for the frontend.
+* The Blackjack Game project is a web application that allows users to play the popular casino card game, Blackjack. The application utilizes the Spring Boot framework for the backend and React for the frontend.
 
-Blackjack, or twenty-one, Card game whose object is to be dealt cards having a higher count than those of the dealer, up to but not exceeding 21. The dealer uses two decks of 104 cards. Aces count as 1 or 11, and face cards as 10.
+* Blackjack, also known as twenty-one, is a card game where the objective is to be dealt cards with a higher total value than the dealer, without exceeding a count of 21. In this game, the dealer uses two decks of 104 cards, and the values are assigned as follows: Aces count as either 1 or 11, and face cards (King, Queen, and Jack) count as 10.
 
-Never played Blackjack before? This is your chance to learn the game in and out. You can play this classic casino game just for fun! You'll be winning in no time.
+* Whether you are new to Blackjack or an experienced player, this application provides an opportunity to learn and enjoy the game. You can play this classic casino game just for fun and improve your skills along the way. With practice, you'll become a skilled player and start winning in no time.
 
 ## How to Use
-Please download code from https://github.com/Yanyan07/Blackjack-App. The server runs on port 8080, and client runs on port 3000. 
+1. Download the code from https://github.com/Yanyan07/Blackjack-App.
+   * The server runs on port 8080, and the client runs on port 3000.
 
-Go to the folder frontend in terminal, and run "npm i" and "npm start". In your browser, the home page is displayed. Click "start" button to start the game and click "exit" button to end the game anytime. Click "deal" button, you'll receive 2 cards. Picture cards are worth 10 points and Aces are worth either 1 or 10. "Hit" for another card, and get your score as close to 21 as you can without going bust. "Stand" for no more card, and show the result. It shuffles every 5 rounds of game, and restarts game when it runs out of cards in the deck.
+2. Open your terminal and navigate to the "frontend" folder.
 
-Thank you for reviewing our project. I hope you enjoyed it as much as I did creating it!
+3. Run the following commands in the terminal:
+   * npm i 
+   * npm start 
+
+4. In your web browser, the home page of the Blackjack-App will be displayed.
+Click the "Start" button to begin the game.
+
+5. To end the game at any time, click the "Exit" button.
+Click the "Deal" button to receive two cards at the beginning of each round.
+
+6. Remember that picture cards are worth 10 points, and Aces are worth either 1 or 10 points.
+
+7. Choose whether to "Hit" or "Stand":
+   * Click "Hit" to receive another card and try to get your total score as close to 21 as possible without exceeding it.
+   * Click "Stand" if you don't want any more cards and want to end your turn.
+
+8. The game will display the result based on your score and the dealer's score.
+
+9. The deck will shuffle every 5 rounds of the game.
+
+10. If the deck runs out of cards, the game will automatically restart.
+
+Thank you for using the Blackjack-App. Enjoy playing!
 
 ## Technologies Used
 * Java 1.8
