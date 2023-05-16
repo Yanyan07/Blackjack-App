@@ -35,7 +35,7 @@ Click the "Deal" button to receive two cards at the beginning of each round.
 
 10. If the deck runs out of cards, the game will automatically restart.
 
-Thank you for using the Blackjack-App. Enjoy playing!
+ Thank you for using the Blackjack-App. Enjoy playing!
 
 ## Technologies Used
 * Java 1.8
