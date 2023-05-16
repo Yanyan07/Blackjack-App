@@ -1,5 +1,5 @@
 # Blackjack App 
-Could you please organize the following "overview" for me?
+
 ## Overview
 * The Blackjack Game project is a web application that allows users to play the popular casino card game, Blackjack. The application utilizes the Spring Boot framework for the backend and React for the frontend.
 
