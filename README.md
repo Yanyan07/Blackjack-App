@@ -53,4 +53,4 @@ Thank you for using the Blackjack-App. Enjoy playing!
 * GitHub
 
 ## Lessons Learned
-In this project, I learned how to let events happen in a certain order in different ways, and how to use different pieces of partial images to make up a whole card picture in CSS. And I would do more functions for the project, like the wager function.
+* In this project, I learned how to let events happen in a certain order in different ways, and how to use different pieces of partial images to make up a whole card picture in CSS. And I would do more functions for the project, like the wager function.
