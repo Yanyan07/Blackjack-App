@@ -18,6 +18,7 @@ export default function Player(props){
   const [isEnd,setIsEnd] = useState(false);
   const [isFlip,setIsFlip] = useState(false);
   const [count,setCount] = useState(0);
+  const [isBtnDisabled,setIsBtnDisables] = useState(false);
   const [suitObj, setSuitObj] = useState({
     "hearts": "hearts.png",
     "spades": "spades.png",
@@ -113,6 +114,7 @@ export default function Player(props){
 
   useEffect(()=>{ //deal is end, show deal again and reset state
     if(isEnd){
+      setIsBtnDisables(true);
       setTimeout(()=>{
         setDealerCards([]);
         setPlayerCards([]);
@@ -154,7 +156,7 @@ export default function Player(props){
 
   const dealCards = ()=>{
     setIsDeal(false);
-  
+    setIsBtnDisables(false);
     const dItems = [];
     const pItems = [];
     for(let i=0; i<4; i++){
@@ -173,8 +175,12 @@ export default function Player(props){
   const hit = ()=>{
     if(!isEnd){
       const item = cardItems.pop();
-      setPlayerItems([...playerItems, item]);
-      axios.post(`http://localhost:8080/deal/${item.id}`);
+      if(item) {
+        setPlayerItems([...playerItems, item]);
+        axios.post(`http://localhost:8080/deal/${item.id}`);
+      }else {
+        reStart();
+      }
     }
   }
 
@@ -192,7 +198,7 @@ export default function Player(props){
   return (
     <div className="player">
       {
-        count%5===0&&isDeal ? <div className="result shuffle">Shuffling...</div> : null
+        count%5===0&&isDeal && <div className="result shuffle">Shuffling...</div>
       }
       
       <button className="exit btn" onClick={reStart} >Exit</button>
@@ -205,8 +211,8 @@ export default function Player(props){
             <div className="dealer-show score"><span>{dealer2ndValue}</span>Dealer</div>
           }
           <div className="player-show score"><span>{playerValue}</span>Player</div>
-          <button className="hit btn" onClick={hit}>Hit</button>
-          <button className="stand btn" onClick={stand}>Stand</button>
+          <button className="hit btn" onClick={hit} disabled={isBtnDisabled}>Hit</button>
+          <button className="stand btn" onClick={stand} disabled={isBtnDisabled}>Stand</button>
           <div className="dealer-cards cards">
             {
               dealerCards.map((card,index) => {
@@ -244,7 +250,7 @@ export default function Player(props){
             }
           </div>
             {
-              isEnd ? 
+              isEnd &&
               <div>
                 {
                   dealerResult && 
@@ -264,8 +270,7 @@ export default function Player(props){
                     {dealResult}
                   </div>
                 }
-              </div> : 
-              null
+              </div> 
             }    
         </div>
       }

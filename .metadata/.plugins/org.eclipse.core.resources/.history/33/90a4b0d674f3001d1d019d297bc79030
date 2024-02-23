@@ -1,5 +1,0 @@
-package com.blackjack.backend.service;
-
-public class PlayerServiceImpl {
-
-}
